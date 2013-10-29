@@ -32,7 +32,7 @@ except getopt.GetoptError, err:
 
 verbose = 0
 
-for o, a in opts:
+for o, _ in opts:
     if o == "-v":
         verbose += 1
 
