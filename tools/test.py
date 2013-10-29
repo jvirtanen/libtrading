@@ -5,6 +5,7 @@ import getopt
 import signal
 import time
 import sys
+import os
 
 numfail = 0
 
@@ -40,8 +41,8 @@ if verbose == 2:
   out = sys.stdout
   err = sys.stderr
 else:
-  out = open('/dev/null', 'w')
-  err = open('/dev/null', 'w')
+  out = open(os.devnull, 'w')
+  err = open(os.devnull, 'w')
 
 def popen_fix_server():
     args = [
