@@ -37,8 +37,8 @@ for o, _ in opts:
         verbose += 1
 
 if verbose == 2:
-  out = open('/dev/stdout', 'w')
-  err = open('/dev/stderr', 'w')
+  out = sys.stdout
+  err = sys.stderr
 else:
   out = open('/dev/null', 'w')
   err = open('/dev/null', 'w')
